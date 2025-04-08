@@ -126,6 +126,12 @@ EL " MEDIA " IDENTIFICA EL TIPO Y TAMAÑO DE DISPOSITIVO
     opacity: 1;
 }
 
+.error{
+    background-color: red;
+    color: #fff;
+    padding: 10px 5px;
+}
+
 /*SERVICIOS*/
 .servicios_contenido{
     margin-top: 15px;
@@ -160,3 +166,4 @@ EL " MEDIA " IDENTIFICA EL TIPO Y TAMAÑO DE DISPOSITIVO
     color: #fff;
     text-align: center;
 }
+
