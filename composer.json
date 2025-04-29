@@ -1,0 +1,12 @@
+{
+    "name": "ruth/veterinaria",
+    "description": "Proyecto Veterinaria del curso de PI del IESTPFFAA",
+    "type": "project",
+    "authors": [
+        {
+            "name": "timoruth02",
+            "email": "timoruth81@gmail.com"
+        }
+    ],
+    "require": {}
+}

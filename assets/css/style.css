@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-:root{
-    --fuentePrincipal: "Montserrat",sans-serif;;
-    --fuenteSecundaria: "Lato", sans-serif;;
+:root {
+    --fuentePrincipal: "Montserrat", sans-serif;
+    --fuenteSecundaria: "Lato", sans-serif;
+    --colorPrincipal: #009659;
 }
 
-*, *::before, *::after{
+
+*, *::before, *::after {
     box-sizing: inherit;
 }
 
@@ -18,122 +20,125 @@ html {
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: var(--fuentePrincipal);
 }
 
-img{
+img {
     max-width: 100%;
     max-height: 100%;
 }
 
-.contenedor{
+.contenedor {
     max-width: 1200px;
     width: 95%;
     margin: 0 auto;
-
 }
+
 
 /* HEADER */
 .header {
     height: 360px;
-    background-image: url('../img/fondo_header.jpg') ;
+    background-image: url('../img/fondo_header.jpg');
     background-position: top center;
     background-size: cover;
 }
 
-@media (min-width: 768px){
-    .header{
+@media(min-width: 768px){
+    .header {
         height: 550px;
     }
 }
 
-.header .header_contenido{
+.header .header__contenido {
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0,55,37,.7) 60%, rgba(0,223,132,.4));
+    background: linear-gradient(rgba(0, 55, 37, .7) 60%, rgb(0, 223, 132, .4));
 }
 
-.menu-mobile{
+.menu-mobile {
     padding: 5px 0;
 }
-.menu-mobile img{
+
+.menu-mobile img {
     height: 32px;
     width: 32px;
 }
 
-/* 
-EL " MEDIA " IDENTIFICA EL TIPO Y TAMAÑO DE DISPOSITIVO
-*/
-@media (min-width:768px){
-    .menu-mobile{
+@media (min-width: 768px) {
+    .menu-mobile {
         display: none;
     }
 }
 
-.header_navegacion{
+.header__navegacion {
     visibility: hidden;
     height: 0;
     opacity: 0;
     transition: height .5s linear, opacity .5s ease-in-out;
 }
 
-@media (min-width:768px){
-  .header .header_navegacion{
+/*
+IDENTIFICA EL TIPO Y TAMAÑO DE DISPOSITIVO
+*/
+
+@media (min-width: 768px){
+    .header .header__navegacion {
         visibility: visible;
         height: auto;
         opacity: 1;
     }
 }
 
-
-.header_nav {
+.header__nav {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 @media(min-width: 768px){
-    .header_nav{
+    .header__nav {
         flex-direction: row;
         justify-content: flex-end;
     }
 }
 
-.header_nav a{
+.header__nav a {
     text-decoration: none;
-    color: #fff;
+    color: #FFF;
     text-transform: uppercase;
     padding: 8px;
     font-size: 22px;
     font-family: var(--fuenteSecundaria);
 }
 
-.header_nav a:hover{
-    background-color: rgba(225,255,255, .2);
-    border-radius:10px ;
+.header__nav a:hover {
+    background-color: rgba(255, 255, 255, .2);
+    border-radius: 10px;
+
 }
 
-.header_info{
-    color: #fff;
+.header__info {
+    color: #FFF;
     max-width: 400px;
     font-family: var(--fuenteSecundaria);
 }
 
-.mostrar{
+.mostrar {
     visibility: visible;
     height: auto;
     opacity: 1;
 }
 
-.error{
+.error {
     background-color: red;
-    color: #fff;
+    color: #FFF;
     padding: 10px 5px;
 }
 
 /*SERVICIOS*/
-.servicios_contenido{
+
+.servicios__contenido {
     margin-top: 15px;
 }
 
@@ -144,26 +149,33 @@ EL " MEDIA " IDENTIFICA EL TIPO Y TAMAÑO DE DISPOSITIVO
         gap: 20px;
     }
 }
-.servicios{
-    margin: 15px;
-    color: rgb(22, 132, 101);
-    font-family: var(--fuenteSecundaria);
-}
 
 .servicio {
     margin-bottom: 20px;
-    margin: 20px;
 }
 
-.servicio_img img{
+.servicio__img img {
     border-radius: 15px;
     box-shadow: 0 0 2px 0 #009659;
 }
 
-.footer_comentario{
-    display: center;
-    background-color: #009659;
-    color: #fff;
-    text-align: center;
+/*Footer*/
+.footer {
+    background-color: var(--colorPrincipal);
+    color: #FFF;
 }
 
+.footer__contenido {
+    display: flex;
+    align-items: center;
+}
+
+.footer__contenido p {
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.footer__contenido p span {
+    display: block;
+}
